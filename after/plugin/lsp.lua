@@ -18,11 +18,15 @@ local lsp_zero = require('lsp-zero').preset({
     suggest_lsp_servers = true,
 })
 
-
--- the rust-tools plugin is responsable to setup the rust server
+--vim.pretty_print(package.loaded['mason.api.command'])
+lsp_zero.ensure_installed({
+    'rust_analyzer',
+})
+-- the rust-tools plugin is responsable for setup the rust server
 -- see to rust-tools.lua
+-- flutter tools plugin is responsable for setup the dart server
+-- see the flutter.lua
 lsp_zero.skip_server_setup({ 'rust_analyzer', 'dartls' })
-lsp_zero.setup_servers({ 'pyright' })
 
 
 
