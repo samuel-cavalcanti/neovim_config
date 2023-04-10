@@ -63,5 +63,9 @@ return require('packer').startup(function(use)
     use { 'm00qek/baleia.nvim', tag = 'v1.2.0' }
     -- games
     use 'ThePrimeagen/vim-be-good'
+
+    -- markdown
+    use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
 end
+
 )
