@@ -36,6 +36,5 @@ lsp_zero.nvim_workspace()
 
 lsp_zero.setup()
 -- format document when save fil
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
 
 --print(dump_table(lsp_zero))
