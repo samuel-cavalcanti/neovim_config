@@ -33,6 +33,14 @@ lsp_zero.skip_server_setup({ 'rust_analyzer', 'dartls' })
 -- Configure lua language server for neovim
 lsp_zero.nvim_workspace()
 
+lsp_zero.on_attach(function(client, bufnr)
+    lsp_zero.default_keymaps({ buffer = bufnr })
+
+    vim.keymap.set({ 'n', 'x' }, '<F3>', function()
+        vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
+    end)
+end)
+
 
 lsp_zero.setup()
 -- format document when save fil
