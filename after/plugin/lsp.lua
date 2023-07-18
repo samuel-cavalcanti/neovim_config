@@ -43,6 +43,5 @@ end)
 
 
 lsp_zero.setup()
--- format document when save fil
 
 --print(dump_table(lsp_zero))
