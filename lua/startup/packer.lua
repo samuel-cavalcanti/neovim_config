@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
     use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim', tag = '0.1.x',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
@@ -39,7 +39,6 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('ThePrimeagen/harpoon')
     -- Rust tools
     use 'simrat39/rust-tools.nvim'
     -- lsp servers
@@ -74,7 +73,7 @@ return require('packer').startup(function(use)
     -- to colorize ANSI escape sequences
     use { 'm00qek/baleia.nvim', tag = 'v1.2.0' }
     -- games
-    use 'ThePrimeagen/vim-be-good'
+    --use 'ThePrimeagen/vim-be-good'
 
     -- markdown
     use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
