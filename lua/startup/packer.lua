@@ -78,6 +78,11 @@ return require('packer').startup(function(use)
     -- markdown
     use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
 
+    -- Comments
+    use {
+        'numToStr/Comment.nvim',
+    }
+
 
     if packer_bootstrap then
         require('packer').sync()
