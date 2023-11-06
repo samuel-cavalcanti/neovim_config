@@ -66,7 +66,7 @@ return require('packer').startup(function(use)
     }
 
     -- formatter
-    use { 'jose-elias-alvarez/null-ls.nvim' }
+    use { 'nvimtools/none-ls.nvim' }
     --
     -- flutter
     use { 'akinsho/flutter-tools.nvim', branch = "main", requires = 'nvim-lua/plenary.nvim' }
