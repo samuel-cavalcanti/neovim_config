@@ -11,5 +11,5 @@ vim.opt.clipboard = 'unnamedplus'
 
 
 
-vim.opt.mouse = ""
+--vim.opt.mouse = ""
 --vim.cmd 'set t_Co=256'

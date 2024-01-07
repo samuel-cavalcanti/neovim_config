@@ -30,7 +30,7 @@ return {
     -- lsp servers
     {
         'VonHeikemen/lsp-zero.nvim',
-        version = 'v3.x',
+        branch = 'v3.x',
         dependencies = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' },             -- Required

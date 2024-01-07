@@ -1,4 +1,3 @@
-local util = require('utils')
 local lsp_zero = require('lsp-zero').preset({
     name = 'minimal',
     set_lsp_keymaps = true,
@@ -6,11 +5,11 @@ local lsp_zero = require('lsp-zero').preset({
     suggest_lsp_servers = true,
 })
 
---vim.pretty_print(package.loaded['mason.api.command'])
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = { 'rust_analyzer', 'lua_ls' },
     handlers = {
+        lsp_zero.default_setup,
         -- the rust-tools plugin is responsable for setup the rust server
         -- see to rust-tools.lua
         -- flutter tools plugin is responsable for setup the dart server
@@ -19,10 +18,14 @@ require('mason-lspconfig').setup({
         --dartls = lsp_zero.noop,
     }
 })
+local cmp = require('cmp')
+local lsp_config =require('lspconfig')
+
 
 -- Configure lua language server for neovim
-local lua_opts = lsp_zero.nvim_lua_ls()
-require('lspconfig').lua_ls.setup(lua_opts)
+lsp_config.lua_ls.setup(lsp_zero.nvim_lua_ls())
+
+
 
 lsp_zero.on_attach(function(client, bufnr)
     lsp_zero.default_keymaps({ buffer = bufnr })
@@ -32,7 +35,14 @@ lsp_zero.on_attach(function(client, bufnr)
     end)
 end)
 
+local cmp_action = lsp_zero.cmp_action()
+
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ['<Tab>'] = cmp_action.tab_complete(),
+    ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
+  })
+})
 
 lsp_zero.setup()
 
---print(dump_table(lsp_zero))
