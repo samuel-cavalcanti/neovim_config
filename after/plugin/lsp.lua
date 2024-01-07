@@ -1,16 +1,4 @@
-function dump_table(o)
-    if type(o) == 'table' then
-        local s = '{ '
-        for k, v in pairs(o) do
-            if type(k) ~= 'number' then k = '"' .. k .. '"' end
-            s = s .. '[' .. k .. '] = ' .. dump_table(v) .. '\n'
-        end
-        return s .. '} '
-    else
-        return tostring(o)
-    end
-end
-
+local util = require('utils')
 local lsp_zero = require('lsp-zero').preset({
     name = 'minimal',
     set_lsp_keymaps = true,
@@ -19,19 +7,22 @@ local lsp_zero = require('lsp-zero').preset({
 })
 
 --vim.pretty_print(package.loaded['mason.api.command'])
-lsp_zero.ensure_installed({
-    'rust_analyzer',
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    ensure_installed = { 'rust_analyzer', 'lua_ls' },
+    handlers = {
+        -- the rust-tools plugin is responsable for setup the rust server
+        -- see to rust-tools.lua
+        -- flutter tools plugin is responsable for setup the dart server
+        -- see the flutter.lua
+        rust_analyzer = lsp_zero.noop,
+        --dartls = lsp_zero.noop,
+    }
 })
--- the rust-tools plugin is responsable for setup the rust server
--- see to rust-tools.lua
--- flutter tools plugin is responsable for setup the dart server
--- see the flutter.lua
-lsp_zero.skip_server_setup({ 'rust_analyzer', 'dartls' })
-
-
 
 -- Configure lua language server for neovim
-lsp_zero.nvim_workspace()
+local lua_opts = lsp_zero.nvim_lua_ls()
+require('lspconfig').lua_ls.setup(lua_opts)
 
 lsp_zero.on_attach(function(client, bufnr)
     lsp_zero.default_keymaps({ buffer = bufnr })
