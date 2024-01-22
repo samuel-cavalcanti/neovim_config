@@ -12,4 +12,4 @@
 - tar
 - bash
 - sh
-
+- wl-clipboard
