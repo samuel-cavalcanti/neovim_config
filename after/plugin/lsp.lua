@@ -18,8 +18,10 @@ require('mason-lspconfig').setup({
         --dartls = lsp_zero.noop,
     }
 })
+
+require('luasnip.loaders.from_vscode').lazy_load()
 local cmp = require('cmp')
-local lsp_config =require('lspconfig')
+local lsp_config = require('lspconfig')
 
 
 -- Configure lua language server for neovim
@@ -38,11 +40,20 @@ end)
 local cmp_action = lsp_zero.cmp_action()
 
 cmp.setup({
-  mapping = cmp.mapping.preset.insert({
-    ['<Tab>'] = cmp_action.tab_complete(),
-    ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
-  })
+    sources = {
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
+        { name = 'vsnip' },
+    },
+    mapping = cmp.mapping.preset.insert({
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<Tab>'] = cmp_action.tab_complete(),
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
+        ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+        ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+    }),
 })
 
-lsp_zero.setup()
 
+lsp_zero.setup()
