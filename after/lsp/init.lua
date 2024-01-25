@@ -1,4 +1,4 @@
-local mason_config = require('after.plugin.lsp.mason_conf')
+local mason_config = require('lsp.mason_conf')
 local cmp_config = require('after.plugin.lsp.cmp_conf')
 local rust_config = require('after.plugin.lsp.rust_conf')
 local flutter_config = require('after.plugin.lsp.flutter_conf')
