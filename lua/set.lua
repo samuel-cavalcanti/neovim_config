@@ -11,6 +11,11 @@ vim.opt.clipboard = 'unnamedplus'
 
 
 
+vim.opt.spell = true
+vim.opt.spelllang = 'en,pt_br'
+
+
+
 
 -- disable mouse
 vim.opt.mouse = ""
