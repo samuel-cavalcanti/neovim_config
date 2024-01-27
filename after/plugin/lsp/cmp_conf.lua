@@ -1,12 +1,17 @@
+
+
+require('luasnip.loaders.from_vscode').lazy_load()
+require('luasnip').config.setup {}
 local lsp_zero = require('lsp-zero')
 local cmp = require('cmp')
 
-require('luasnip.loaders.from_vscode').lazy_load()
 local cmp_action = lsp_zero.cmp_action()
 local cmp_format = lsp_zero.cmp_format()
 
+
 cmp.setup({
     sources = {
+        { name = 'nvim_lua' },
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'buffer' },
@@ -30,7 +35,7 @@ cmp.setup({
 -- Set configuration for specific filetype.
 cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
-        { name = 'git' },     -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
+        { name = 'git' }, -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
     }, {
         { name = 'buffer' },
     })

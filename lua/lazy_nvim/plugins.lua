@@ -39,7 +39,7 @@ return {
             {
                 'hrsh7th/nvim-cmp',                  -- Autocompletion Required
                 dependencies = {
-
+                    { 'hrsh7th/cmp-nvim-lua' },
                     { 'hrsh7th/cmp-nvim-lsp' },     -- Required
                     { 'hrsh7th/cmp-buffer' },       -- Optional
                     { 'hrsh7th/cmp-path' },         -- Optional
@@ -71,6 +71,13 @@ return {
         },
         config = true,
     }, -- to colorize ANSI escape sequences
+    {
+        "folke/neodev.nvim",
+        opts = {},
+        dependencies = {
+            'hrsh7th/nvim-cmp', -- Autocompletion Required
+        }
+    },
     -- {
     --     'm00qek/baleia.nvim',
     --     version = 'v1.4.0',

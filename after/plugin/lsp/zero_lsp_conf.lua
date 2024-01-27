@@ -18,4 +18,6 @@ local lsp_config = require('lspconfig')
 lsp_config.lua_ls.setup(lsp_zero.nvim_lua_ls())
 
 
+
 lsp_zero.setup()
+-- IMPORTANT: make sure to setup neodev BEFORE lspconfig
