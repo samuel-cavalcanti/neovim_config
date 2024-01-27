@@ -40,10 +40,11 @@ return {
                 'hrsh7th/nvim-cmp',                  -- Autocompletion Required
                 dependencies = {
                     { 'hrsh7th/cmp-nvim-lua' },
-                    { 'hrsh7th/cmp-nvim-lsp' },     -- Required
-                    { 'hrsh7th/cmp-buffer' },       -- Optional
-                    { 'hrsh7th/cmp-path' },         -- Optional
+                    { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+                    { 'hrsh7th/cmp-buffer' },   -- Optional
+                    { 'hrsh7th/cmp-path' },     -- Optional
                     { 'hrsh7th/cmp-cmdline' },
+                    { 'f3fora/cmp-spell' },
                     { 'saadparwaiz1/cmp_luasnip' }, -- Optional
                     -- Snippets
                     {

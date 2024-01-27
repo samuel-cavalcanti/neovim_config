@@ -1,5 +1,3 @@
-
-
 require('luasnip.loaders.from_vscode').lazy_load()
 require('luasnip').config.setup {}
 local lsp_zero = require('lsp-zero')
@@ -8,14 +6,14 @@ local cmp = require('cmp')
 local cmp_action = lsp_zero.cmp_action()
 local cmp_format = lsp_zero.cmp_format()
 
-
 cmp.setup({
     sources = {
         { name = 'nvim_lua' },
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
-        { name = 'buffer' },
+        { name = 'spell',   keyword_length = 5 },
         { name = 'path' },
+        { name = 'buffer',  keyword_length = 5 },
     },
     window = {
         completion = cmp.config.window.bordered(),
@@ -30,6 +28,7 @@ cmp.setup({
         ['<C-b>'] = cmp_action.luasnip_jump_backward(),
     }),
     formatting = cmp_format,
+
 })
 
 -- Set configuration for specific filetype.
