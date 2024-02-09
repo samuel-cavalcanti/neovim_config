@@ -1,0 +1,6 @@
+{
+  "mermaid": {
+    "prefix": "mermaid",
+    "body": "```mermaid \n%%{init: {\"flowchart\": {\"htmlLabels\": false}} }%%\nflowchart TB\n${0}\n```"
+  }
+}

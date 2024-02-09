@@ -1,4 +1,5 @@
 require('luasnip.loaders.from_vscode').lazy_load()
+require('luasnip.loaders.from_vscode').lazy_load { paths = { "./snippets" } }
 require('luasnip').config.setup {}
 local lsp_zero = require('lsp-zero')
 local cmp = require('cmp')
