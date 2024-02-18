@@ -1,5 +1,4 @@
 local function ColorMyPencils(color)
-
     color = color or "rose-pine"
     vim.cmd.colorscheme(color)
     vim.api.nvim_set_hl(0, "normal", { bg = "none" })
@@ -20,16 +19,14 @@ local function catppuccinTheme()
     })
 
     vim.cmd.colorscheme("catppuccin")
-
 end
 
 local function materialTheme()
     local material = require('material')
-    material.setup()
+    material.setup{}
 
     vim.g.material_style = "darker"
     vim.cmd.colorscheme("material")
-
 end
 
 vim.opt.termguicolors = true

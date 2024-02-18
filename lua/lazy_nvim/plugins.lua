@@ -117,9 +117,6 @@ return {
     -- games
     -- 'ThePrimeagen/vim-be-good'
 
-    -- markdown
-    { 'toppair/peek.nvim',     build = 'deno task --quiet build:fast' },
-
     -- Comments
     {
         'numToStr/Comment.nvim',
