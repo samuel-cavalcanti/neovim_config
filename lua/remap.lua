@@ -21,3 +21,10 @@ vim.keymap.set("n", "<C-s>", "<Esc>:write!<Esc>")
 -- Pressing Space + p will paste the content without losing it
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
+
+
+-- moving through window fast
+vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<leader>j", "<C-w>j")
+vim.keymap.set("n", "<leader>h", "<C-w>h")
+vim.keymap.set("n", "<leader>l", "<C-w>l")
