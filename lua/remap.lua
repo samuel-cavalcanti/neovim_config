@@ -23,8 +23,16 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 
 
+
+
 -- moving through window fast
 vim.keymap.set("n", "<leader>k", "<C-w>k")
 vim.keymap.set("n", "<leader>j", "<C-w>j")
 vim.keymap.set("n", "<leader>h", "<C-w>h")
 vim.keymap.set("n", "<leader>l", "<C-w>l")
+
+-- map double ESC to exit terminal-mode
+vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]])
+
+-- closing window
+vim.keymap.set("n", "<Esc><Esc>", "ZZ")
