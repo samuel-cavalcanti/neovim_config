@@ -2,6 +2,8 @@
 
 ## dependências
 
+- nvim >= **0.10**
+
 - node, npm
 - ripgrep
 - fd
