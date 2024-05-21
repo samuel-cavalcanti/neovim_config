@@ -26,7 +26,11 @@ return {
         build = ':TSUpdate'
     },
     -- Rust tools
-    'simrat39/rust-tools.nvim',
+    {
+        'mrcjkb/rustaceanvim',
+        version = '^4', -- Recommended
+        lazy = false, -- This plugin is already lazy
+    },
     -- lsp servers
     {
         'VonHeikemen/lsp-zero.nvim',

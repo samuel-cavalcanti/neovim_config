@@ -7,6 +7,7 @@ local lsp_zero = require('lsp-zero').preset({
 
 lsp_zero.on_attach(function(client, bufnr)
     lsp_zero.default_keymaps({ buffer = bufnr })
+    vim.lsp.inlay_hint.enable(true)
 
     vim.keymap.set({ 'n', 'x' }, '<F3>', function()
         vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
