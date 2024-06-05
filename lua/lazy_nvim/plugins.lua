@@ -29,7 +29,7 @@ return {
     {
         'mrcjkb/rustaceanvim',
         version = '^4', -- Recommended
-        lazy = false, -- This plugin is already lazy
+        lazy = false,   -- This plugin is already lazy
     },
     -- lsp servers
     {
@@ -52,7 +52,9 @@ return {
                     { 'saadparwaiz1/cmp_luasnip' }, -- Optional
                     -- Snippets
                     {
-                        'L3MON4D3/LuaSnip',                     -- Required
+                        'L3MON4D3/LuaSnip', -- Required
+                        version = "v2.*",
+                        build = 'make install_jsregexp',
                         dependencies = {
                             { 'rafamadriz/friendly-snippets' }, -- Optional
                         }
