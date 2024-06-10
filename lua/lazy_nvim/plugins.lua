@@ -31,6 +31,8 @@ return {
         version = '^4', -- Recommended
         lazy = false,   -- This plugin is already lazy
     },
+
+    "b0o/schemastore.nvim",
     -- lsp servers
     {
         'VonHeikemen/lsp-zero.nvim',
