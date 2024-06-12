@@ -1,6 +1,13 @@
 return {
-    { 'kyazdani42/nvim-web-devicons' },
-    { 'romgrk/barbar.nvim',          dependencies = 'nvim-web-devicons' },
+
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    { 'nvim-tree/nvim-web-devicons' },
+    { 'romgrk/barbar.nvim',         dependencies = 'nvim-web-devicons' },
 
     {
         'nvim-telescope/telescope.nvim',
