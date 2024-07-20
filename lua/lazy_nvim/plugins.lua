@@ -6,8 +6,7 @@ return {
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
-    { 'nvim-tree/nvim-web-devicons' },
-    { 'romgrk/barbar.nvim',         dependencies = 'nvim-web-devicons' },
+    { 'romgrk/barbar.nvim', dependencies = 'nvim-tree/nvim-web-devicons' },
 
     {
         'nvim-telescope/telescope.nvim',
@@ -16,18 +15,17 @@ return {
         dependencies = { { 'nvim-lua/plenary.nvim' } },
     },
     -- themes
-    { 'rose-pine/neovim', name = 'rose-pine' },
-    { "catppuccin/nvim",  name = "catppuccin" },
+    { 'rose-pine/neovim',   name = 'rose-pine' },
+    { "catppuccin/nvim",    name = "catppuccin" },
     'marko-cerovac/material.nvim',
 
     -- buttom bar
     {
         'nvim-lualine/lualine.nvim',
-        dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true }
+        dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
     },
     {
         'nvim-treesitter/nvim-treesitter',
-        version = "*",
         dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects',
         },
         build = ':TSUpdate'
