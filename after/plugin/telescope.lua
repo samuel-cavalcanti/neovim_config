@@ -5,12 +5,12 @@ vim.keymap.set('n', '<leader>pg', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 
---local telescope = require("telescope")
---
---telescope.setup({ extensions = {
---    media = {
---        backend = "viu"
---    }
---} })
---
---telescope.load_extension("media")
+local telescope = require("telescope")
+
+telescope.setup {
+    pickers = {
+        find_files = {
+            hidden = true
+        }
+    },
+}
