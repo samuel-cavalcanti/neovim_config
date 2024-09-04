@@ -1,10 +1,7 @@
 return {
-        {
-                'samuel-cavalcanti/wifi-android-connect'
+        { 'samuel-cavalcanti/wifi-android-connect' },
 
-        },
-
-        { 'romgrk/barbar.nvim', dependencies = 'nvim-tree/nvim-web-devicons' },
+        { 'romgrk/barbar.nvim',                    dependencies = 'nvim-tree/nvim-web-devicons' },
 
         {
                 'nvim-telescope/telescope.nvim',
@@ -13,8 +10,8 @@ return {
                 dependencies = { { 'nvim-lua/plenary.nvim' } },
         },
         -- themes
-        { 'rose-pine/neovim',   name = 'rose-pine' },
-        { "catppuccin/nvim",    name = "catppuccin" },
+        { 'rose-pine/neovim', name = 'rose-pine' },
+        { "catppuccin/nvim",  name = "catppuccin" },
         'marko-cerovac/material.nvim',
 
         -- buttom bar

@@ -31,5 +31,5 @@
   "rustaceanvim": { "branch": "master", "commit": "047f9c9d8cd2861745eb9de6c1570ee0875aa795" },
   "schemastore.nvim": { "branch": "main", "commit": "c97985bbe5a0988767216f9b54a8e05d70ce8505" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
-  "wifi-android-connect": { "branch": "main", "commit": "2f5aed6234a82fb644a8cc64a2fb3ad0e2992be3" }
+  "wifi-android-connect": { "branch": "main", "commit": "fffb93443d5c2d5d7aace89b57ba339ea52b5740" }
 }
