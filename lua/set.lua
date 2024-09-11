@@ -1,3 +1,4 @@
+vim.opt.number = true
 vim.opt.relativenumber = true -- show the relative numbers
 vim.opt.expandtab = true
 
