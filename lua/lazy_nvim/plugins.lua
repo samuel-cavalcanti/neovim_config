@@ -44,7 +44,7 @@ return {
         -- lsp servers
         {
                 'VonHeikemen/lsp-zero.nvim',
-                branch = 'v3.x',
+                branch = 'v4.x',
                 dependencies = {
                         -- LSP Support
                         { 'neovim/nvim-lspconfig' },             -- Required
@@ -76,7 +76,13 @@ return {
         },
 
         -- formatter
-        { 'nvimtools/none-ls.nvim' },
+        {
+                'nvimtools/none-ls.nvim',
+                dependencies = {
+                        "nvimtools/none-ls-extras.nvim",
+                }
+
+        },
         --
         -- flutter
         {
