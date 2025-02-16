@@ -8,6 +8,7 @@ return {
 
 
         },
+        { 'nvim-java/nvim-java' },
 
         { 'romgrk/barbar.nvim', dependencies = 'nvim-tree/nvim-web-devicons' },
 
@@ -18,8 +19,8 @@ return {
                 dependencies = { { 'nvim-lua/plenary.nvim' } },
         },
         -- themes
-        { 'rose-pine/neovim',   name = 'rose-pine' },
-        { "catppuccin/nvim",    name = "catppuccin" },
+        { 'rose-pine/neovim', name = 'rose-pine' },
+        { "catppuccin/nvim",  name = "catppuccin" },
         'marko-cerovac/material.nvim',
 
         -- buttom bar
@@ -92,7 +93,7 @@ return {
                         'nvim-lua/plenary.nvim',
                         'stevearc/dressing.nvim', -- optional for vim.ui.select
                 },
-                -- config = true,
+                config = true,
         }, -- to colorize ANSI escape sequences
         {
                 "folke/neodev.nvim",
